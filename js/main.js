@@ -2,64 +2,71 @@
    THRIVE THERAPY UG — Main JavaScript
    ============================================ */
 
-// ─── Site-header scroll effect ───
-const siteHeader = document.querySelector('.site-header');
-const navbar     = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-  if (siteHeader) {
-    if (window.scrollY > 40) siteHeader.classList.add('scrolled');
+// ─── Header scroll behaviour ───
+const siteHeader = document.getElementById('siteHeader');
+if (siteHeader) {
+  const onScroll = () => {
+    if (window.scrollY > 50) siteHeader.classList.add('scrolled');
     else siteHeader.classList.remove('scrolled');
-  } else if (navbar) {
-    // Fallback for pages without .site-header wrapper
-    if (window.scrollY > 50) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
-  }
-});
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // initialise state on load
+}
 
 // ─── Mobile nav ───
-const hamburger  = document.querySelector('.hamburger');
-const mobileNav  = document.querySelector('.mobile-nav');
+const hamburger   = document.getElementById('hamburger');
+const mobileNav   = document.getElementById('mobileNav');
 const mobileClose = document.querySelector('.mobile-close');
 
-if (hamburger)  hamburger.addEventListener('click', () => mobileNav.classList.add('open'));
-if (mobileClose) mobileClose.addEventListener('click', () => mobileNav.classList.remove('open'));
-document.querySelectorAll('.mobile-nav a').forEach(link => {
-  link.addEventListener('click', () => mobileNav.classList.remove('open'));
-});
+function openMenu()  { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeMenu() { mobileNav.classList.remove('open'); document.body.style.overflow = ''; }
 
-// ─── Active nav link ───
+if (hamburger)   hamburger.addEventListener('click', openMenu);
+if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+document.querySelectorAll('.mobile-nav a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+// ─── Active nav link (desktop) ───
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(link => {
-  const href = link.getAttribute('href');
+  const href = (link.getAttribute('href') || '').split('?')[0];
   if (href === currentPage || (currentPage === '' && href === 'index.html')) {
     link.classList.add('active');
   }
 });
 
-// ─── Scroll animations ───
-const observer = new IntersectionObserver((entries) => {
+// ─── Scroll fade-in animations ───
+const fadeObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      fadeObserver.unobserve(entry.target);
+    }
   });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
 // ─── Counter animation ───
-function animateCounter(el, target, duration = 1800) {
-  let start = 0;
-  const step = target / (duration / 16);
-  const timer = setInterval(() => {
-    start += step;
-    if (start >= target) { el.textContent = target + (el.dataset.suffix || ''); clearInterval(timer); }
-    else el.textContent = Math.floor(start) + (el.dataset.suffix || '');
-  }, 16);
+function animateCounter(el, target, suffix, duration) {
+  const start = performance.now();
+  const tick = ts => {
+    const progress = Math.min((ts - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
 }
-const counterObserver = new IntersectionObserver((entries) => {
+const counterObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting && !entry.target.dataset.counted) {
       entry.target.dataset.counted = 'true';
-      animateCounter(entry.target, parseInt(entry.target.dataset.target), 1800);
+      animateCounter(
+        entry.target,
+        parseInt(entry.target.dataset.target, 10),
+        entry.target.dataset.suffix || '',
+        1800
+      );
     }
   });
 }, { threshold: 0.5 });
@@ -71,14 +78,15 @@ if (bookingForm) {
   bookingForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('button[type="submit"]');
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    const orig = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
     btn.disabled = true;
     setTimeout(() => {
-      btn.innerHTML = '<i class="fas fa-check"></i> Booking Request Sent!';
+      btn.innerHTML = '<i class="fas fa-check"></i> Request Sent!';
       btn.style.background = '#52B788';
       setTimeout(() => {
         bookingForm.reset();
-        btn.innerHTML = 'Book My Session';
+        btn.innerHTML = orig;
         btn.style.background = '';
         btn.disabled = false;
       }, 3000);
@@ -92,14 +100,15 @@ if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('button[type="submit"]');
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    const orig = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
     btn.disabled = true;
     setTimeout(() => {
       btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
       btn.style.background = '#52B788';
       setTimeout(() => {
         contactForm.reset();
-        btn.innerHTML = 'Send Message';
+        btn.innerHTML = orig;
         btn.style.background = '';
         btn.disabled = false;
       }, 3000);
@@ -108,18 +117,10 @@ if (contactForm) {
 }
 
 // ─── Blog filter ───
-window.filterBlog = function(category) {
-  const cards = document.querySelectorAll('#blogGrid .blog-card');
-  const btns  = document.querySelectorAll('.blog-filter-btn');
-  btns.forEach(b => {
-    b.style.background = 'transparent';
-    b.style.color = 'var(--green-deep)';
-    b.style.borderColor = 'rgba(27,67,50,0.2)';
-  });
-  event.target.style.background = 'var(--green-deep)';
-  event.target.style.color = 'white';
-  event.target.style.borderColor = 'var(--green-deep)';
-  cards.forEach(card => {
+window.filterBlog = function(category, btn) {
+  document.querySelectorAll('#blogGrid .blog-card').forEach(card => {
     card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
   });
+  document.querySelectorAll('.blog-filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
 };
