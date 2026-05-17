@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Thrive Therapy UG</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+</head>
+<body>
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <a href="index.html" class="logo"><div class="logo-icon">🌿</div>Thrive Therapy</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li><li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="book.html" class="btn btn-primary nav-cta">Book a Session</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+  <a href="book.html" class="btn btn-white">Book a Session</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Contact</div>
+    <h1>Get in Touch</h1>
+    <p>We'd love to hear from you. Reach out with any questions or to learn more about our services.</p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="grid-2" style="gap:64px;">
+
+      <!-- CONTACT FORM -->
+      <div class="fade-in">
+        <div class="section-label" style="margin-bottom:8px;">Send a Message</div>
+        <h2 style="margin-bottom:24px;font-size:1.8rem;">We'll Respond Within 24 Hours</h2>
+        <form id="contactForm" style="display:flex;flex-direction:column;gap:20px;">
+          <div class="form-grid" style="grid-template-columns:1fr 1fr;">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" placeholder="Sarah" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" placeholder="Nakato" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+256 700 000 000" />
+          </div>
+          <div class="form-group">
+            <label>Subject *</label>
+            <select required>
+              <option value="" disabled selected>What is this about?</option>
+              <option>General Enquiry</option>
+              <option>Booking Information</option>
+              <option>Session Fees</option>
+              <option>Corporate Wellness</option>
+              <option>Online Therapy</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message *</label>
+            <textarea placeholder="Write your message here..." required style="min-height:140px;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem;">Send Message</button>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="fade-in fade-in-delay-2" style="display:flex;flex-direction:column;gap:40px;">
+        <div>
+          <div class="section-label" style="margin-bottom:8px;">Contact Details</div>
+          <h2 style="margin-bottom:24px;font-size:1.8rem;">Find Us</h2>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h4>Our Clinic</h4>
+                <p>Plot 14, Kololo Hill Drive<br/>Kampala, Uganda</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <h4>Call or WhatsApp</h4>
+                <p><a href="tel:+256700000000" style="color:var(--green-mid);">+256 700 000 000</a><br/>
+                <a href="tel:+256780000000" style="color:var(--green-mid);">+256 780 000 000</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <h4>Email Us</h4>
+                <p><a href="mailto:hello@thrivetherapyug.com" style="color:var(--green-mid);">hello@thrivetherapyug.com</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <h4>Working Hours</h4>
+                <p>Monday – Friday: 8:00 AM – 6:00 PM<br/>Saturday: 9:00 AM – 3:00 PM<br/>Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAP PLACEHOLDER -->
+        <div style="background:linear-gradient(135deg,var(--green-deep),var(--green-mid));border-radius:var(--radius-lg);height:220px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:white;">
+          <div style="font-size:2.5rem;">📍</div>
+          <div style="font-family:var(--font-display);font-size:1.2rem;">Kololo Hill Drive, Kampala</div>
+          <a href="https://maps.google.com/?q=Kololo+Kampala+Uganda" target="_blank" class="btn btn-white" style="padding:10px 24px;font-size:0.85rem;margin-top:4px;">Open in Maps →</a>
+        </div>
+
+        <!-- SOCIAL -->
+        <div>
+          <h4 style="margin-bottom:16px;color:var(--green-deep);">Follow Us</h4>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="#" class="btn btn-outline" style="padding:10px 20px;font-size:0.85rem;gap:8px;">📘 Facebook</a>
+            <a href="#" class="btn btn-outline" style="padding:10px 20px;font-size:0.85rem;gap:8px;">📸 Instagram</a>
+            <a href="#" class="btn btn-outline" style="padding:10px 20px;font-size:0.85rem;gap:8px;">💼 LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-green">
+  <div class="container">
+    <div class="section-header centered fade-in">
+      <div class="section-label">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:16px;">
+
+      <details class="fade-in" style="background:white;border-radius:var(--radius);padding:24px;border:1px solid rgba(27,67,50,0.1);cursor:pointer;">
+        <summary style="font-weight:600;color:var(--green-deep);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Is therapy confidential? <span style="font-size:1.2rem;color:var(--green-sage);">+</span>
+        </summary>
+        <p style="margin-top:16px;font-size:0.93rem;">Yes, absolutely. Everything shared in your sessions is strictly confidential between you and your therapist. We only break confidentiality in rare legal exceptions (such as risk of harm to yourself or others).</p>
+      </details>
+
+      <details class="fade-in fade-in-delay-1" style="background:white;border-radius:var(--radius);padding:24px;border:1px solid rgba(27,67,50,0.1);cursor:pointer;">
+        <summary style="font-weight:600;color:var(--green-deep);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          How do I know which therapist is right for me? <span style="font-size:1.2rem;color:var(--green-sage);">+</span>
+        </summary>
+        <p style="margin-top:16px;font-size:0.93rem;">During your free initial consultation, we assess your needs and match you with the therapist best suited to your situation, preferences, and goals. You can also request to switch therapists at any time.</p>
+      </details>
+
+      <details class="fade-in fade-in-delay-2" style="background:white;border-radius:var(--radius);padding:24px;border:1px solid rgba(27,67,50,0.1);cursor:pointer;">
+        <summary style="font-weight:600;color:var(--green-deep);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          How many sessions will I need? <span style="font-size:1.2rem;color:var(--green-sage);">+</span>
+        </summary>
+        <p style="margin-top:16px;font-size:0.93rem;">This varies greatly by individual and presenting concern. Some clients see significant progress in 6–8 sessions, while others benefit from ongoing support. Your therapist will discuss a recommended treatment plan with you.</p>
+      </details>
+
+      <details class="fade-in fade-in-delay-3" style="background:white;border-radius:var(--radius);padding:24px;border:1px solid rgba(27,67,50,0.1);cursor:pointer;">
+        <summary style="font-weight:600;color:var(--green-deep);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Do you offer online therapy? <span style="font-size:1.2rem;color:var(--green-sage);">+</span>
+        </summary>
+        <p style="margin-top:16px;font-size:0.93rem;">Yes! We offer fully secure online video sessions for clients anywhere in Uganda or internationally. Online sessions are equally effective and offer maximum privacy and convenience.</p>
+      </details>
+
+      <details class="fade-in" style="background:white;border-radius:var(--radius);padding:24px;border:1px solid rgba(27,67,50,0.1);cursor:pointer;">
+        <summary style="font-weight:600;color:var(--green-deep);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          What are your payment methods? <span style="font-size:1.2rem;color:var(--green-sage);">+</span>
+        </summary>
+        <p style="margin-top:16px;font-size:0.93rem;">We accept cash, MTN Mobile Money, Airtel Money, and bank transfer. Payment is due before each session. We can also arrange payment plans for clients undertaking long-term therapy.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container" style="position:relative;">
+    <h2>Ready to Take the First Step?</h2>
+    <p>Book your free 15-minute consultation today. No commitment, no pressure — just a conversation.</p>
+    <a href="book.html" class="btn btn-white">Book a Free Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo" style="color:white;"><div class="logo-icon">🌿</div>Thrive Therapy UG</div>
+        <p>Compassionate therapy for Uganda. Serving clients since 2016.</p>
+        <div class="social-links" style="margin-top:24px;">
+          <a href="#" class="social-link">f</a><a href="#" class="social-link">in</a><a href="#" class="social-link">tw</a><a href="#" class="social-link">ig</a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Services</h5><ul class="footer-links">
+        <li><a href="services.html">Individual Therapy</a></li><li><a href="services.html">Couples Therapy</a></li>
+        <li><a href="services.html">Family Therapy</a></li><li><a href="services.html">Online Sessions</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Company</h5><ul class="footer-links">
+        <li><a href="about.html">About Us</a></li><li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul class="footer-links">
+        <li><a href="#">📍 Kampala, Uganda</a></li>
+        <li><a href="tel:+256700000000">📞 +256 700 000 000</a></li>
+        <li><a href="mailto:hello@thrivetherapyug.com">✉️ hello@thrivetherapyug.com</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Thrive Therapy UG. All rights reserved.</span><span>Built with ❤️ in Uganda</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

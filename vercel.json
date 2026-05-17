@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/about", "dest": "/about.html" },
+    { "src": "/services", "dest": "/services.html" },
+    { "src": "/book", "dest": "/book.html" },
+    { "src": "/testimonials", "dest": "/testimonials.html" },
+    { "src": "/blog", "dest": "/blog.html" },
+    { "src": "/contact", "dest": "/contact.html" }
+  ]
+}
