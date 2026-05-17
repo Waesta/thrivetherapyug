@@ -9,18 +9,52 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231B4332'><path d='M17 8C8 10 5.9 16.17 3.82 22h3.28l1-2.5C9.96 21.18 11.8 22 14 22c5.52 0 10-4.48 10-10 0-4.42-2.88-8.13-6.87-9.58L17 8z'/></svg>" />
 </head>
 <body>
-<nav class="navbar scrolled" id="navbar">
-  <div class="container">
-    <a href="index.html" class="logo"><div class="logo-icon"><i class="fas fa-leaf"></i></div>Thrive Therapy</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li><li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="book.html" class="btn btn-primary nav-cta">Book a Session</a>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="top-bar-info">
+          <a href="tel:+256700000000"><i class="fas fa-phone"></i> +256 700 000 000</a>
+          <a href="mailto:hello@thrivetherapyug.com"><i class="fas fa-envelope"></i> hello@thrivetherapyug.com</a>
+          <span><i class="fas fa-clock"></i> Mon – Sat: 8am – 6pm</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><div class="logo-icon"><i class="fas fa-leaf"></i></div>Thrive Therapy</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="services.html">Services <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="services-dropdown">
+            <a href="services.html"><span class="dd-icon"><i class="fas fa-brain"></i></span>Individual Therapy</a>
+            <a href="services.html"><span class="dd-icon"><i class="fas fa-heart"></i></span>Couples Therapy</a>
+            <a href="services.html"><span class="dd-icon"><i class="fas fa-people-roof"></i></span>Family Therapy</a>
+            <a href="services.html"><span class="dd-icon"><i class="fas fa-child-reaching"></i></span>Child &amp; Adolescent</a>
+            <a href="services.html"><span class="dd-icon"><i class="fas fa-video"></i></span>Online Therapy</a>
+            <a href="services.html"><span class="dd-icon"><i class="fas fa-users"></i></span>Group Therapy</a>
+            <a href="services.html"><span class="dd-icon"><i class="fas fa-shield-heart"></i></span>Trauma Recovery</a>
+            <a href="services.html"><span class="dd-icon"><i class="fas fa-briefcase"></i></span>Corporate Wellness</a>
+            <a href="book.html" class="dd-book"><span class="dd-icon"><i class="fas fa-calendar-check"></i></span>Book a Session</a>
+          </div>
+        </li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="book.html" class="btn btn-primary nav-cta">Book a Session</a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+</header>
 <div class="mobile-nav" id="mobileNav">
   <button class="mobile-close" id="mobileClose">&#10005;</button>
   <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
@@ -36,16 +70,16 @@
   </div>
 </section>
 
-<!-- CATEGORIES -->
-<section style="background:var(--white);padding:32px 0;border-bottom:1px solid rgba(27,67,50,0.08);">
+<!-- FILTER BAR -->
+<section style="background:var(--white);padding:28px 0;border-bottom:1px solid rgba(27,67,50,0.08);">
   <div class="container">
-    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
-      <button onclick="filterBlog('all')" class="blog-filter-btn active" style="padding:8px 20px;border-radius:50px;border:1.5px solid var(--green-deep);background:var(--green-deep);color:white;cursor:pointer;font-size:0.85rem;font-family:var(--font-body);transition:all 0.3s;">All Articles</button>
-      <button onclick="filterBlog('anxiety')" class="blog-filter-btn" style="padding:8px 20px;border-radius:50px;border:1.5px solid rgba(27,67,50,0.2);background:transparent;color:var(--green-deep);cursor:pointer;font-size:0.85rem;font-family:var(--font-body);transition:all 0.3s;">Anxiety</button>
-      <button onclick="filterBlog('relationships')" class="blog-filter-btn" style="padding:8px 20px;border-radius:50px;border:1.5px solid rgba(27,67,50,0.2);background:transparent;color:var(--green-deep);cursor:pointer;font-size:0.85rem;font-family:var(--font-body);transition:all 0.3s;">Relationships</button>
-      <button onclick="filterBlog('self-care')" class="blog-filter-btn" style="padding:8px 20px;border-radius:50px;border:1.5px solid rgba(27,67,50,0.2);background:transparent;color:var(--green-deep);cursor:pointer;font-size:0.85rem;font-family:var(--font-body);transition:all 0.3s;">Self-Care</button>
-      <button onclick="filterBlog('trauma')" class="blog-filter-btn" style="padding:8px 20px;border-radius:50px;border:1.5px solid rgba(27,67,50,0.2);background:transparent;color:var(--green-deep);cursor:pointer;font-size:0.85rem;font-family:var(--font-body);transition:all 0.3s;">Trauma</button>
-      <button onclick="filterBlog('parenting')" class="blog-filter-btn" style="padding:8px 20px;border-radius:50px;border:1.5px solid rgba(27,67,50,0.2);background:transparent;color:var(--green-deep);cursor:pointer;font-size:0.85rem;font-family:var(--font-body);transition:all 0.3s;">Parenting</button>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+      <button onclick="filterBlog('all')" class="blog-filter-btn active" style="padding:8px 20px;border-radius:50px;border:1.5px solid var(--green-deep);background:var(--green-deep);color:white;cursor:pointer;font-size:0.84rem;font-family:var(--font-body);transition:all 0.3s;">All Articles</button>
+      <button onclick="filterBlog('anxiety')" class="blog-filter-btn" style="padding:8px 20px;border-radius:50px;border:1.5px solid rgba(27,67,50,0.2);background:transparent;color:var(--green-deep);cursor:pointer;font-size:0.84rem;font-family:var(--font-body);transition:all 0.3s;">Anxiety</button>
+      <button onclick="filterBlog('relationships')" class="blog-filter-btn" style="padding:8px 20px;border-radius:50px;border:1.5px solid rgba(27,67,50,0.2);background:transparent;color:var(--green-deep);cursor:pointer;font-size:0.84rem;font-family:var(--font-body);transition:all 0.3s;">Relationships</button>
+      <button onclick="filterBlog('self-care')" class="blog-filter-btn" style="padding:8px 20px;border-radius:50px;border:1.5px solid rgba(27,67,50,0.2);background:transparent;color:var(--green-deep);cursor:pointer;font-size:0.84rem;font-family:var(--font-body);transition:all 0.3s;">Self-Care</button>
+      <button onclick="filterBlog('trauma')" class="blog-filter-btn" style="padding:8px 20px;border-radius:50px;border:1.5px solid rgba(27,67,50,0.2);background:transparent;color:var(--green-deep);cursor:pointer;font-size:0.84rem;font-family:var(--font-body);transition:all 0.3s;">Trauma</button>
+      <button onclick="filterBlog('parenting')" class="blog-filter-btn" style="padding:8px 20px;border-radius:50px;border:1.5px solid rgba(27,67,50,0.2);background:transparent;color:var(--green-deep);cursor:pointer;font-size:0.84rem;font-family:var(--font-body);transition:all 0.3s;">Parenting</button>
     </div>
   </div>
 </section>
@@ -53,143 +87,120 @@
 <section class="section section-alt">
   <div class="container">
 
-    <!-- FEATURED -->
-    <div class="fade-in" style="background:linear-gradient(135deg,var(--green-deep),var(--green-mid));border-radius:var(--radius-lg);padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:56px;">
-      <div>
-        <span class="badge" style="background:rgba(255,255,255,0.2);color:white;margin-bottom:16px;">Featured Article</span>
-        <h2 style="color:white;margin-bottom:16px;font-size:2rem;">Understanding Mental Health Stigma in Uganda</h2>
-        <p style="color:rgba(255,255,255,0.75);margin-bottom:28px;">Why talking about mental health still feels taboo for many Ugandans — and what we can do as communities to change that.</p>
-        <div style="display:flex;align-items:center;gap:16px;margin-bottom:28px;">
-          <div style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-display);font-weight:600;">S</div>
-          <div>
-            <div style="color:white;font-size:0.9rem;font-weight:500;">Dr. Sarah Nakato</div>
-            <div style="color:rgba(255,255,255,0.6);font-size:0.8rem;">Jan 2025 &middot; 8 min read</div>
+    <!-- FEATURED ARTICLE -->
+    <div class="featured-blog fade-in" style="background-image:url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80');">
+      <div class="featured-blog-inner">
+        <div>
+          <span class="badge" style="background:rgba(255,255,255,0.2);color:white;margin-bottom:16px;">Featured Article</span>
+          <h2 style="color:white;margin-bottom:16px;font-size:2rem;">Understanding Mental Health Stigma in Uganda</h2>
+          <p style="color:rgba(255,255,255,0.8);margin-bottom:28px;">Why talking about mental health still feels taboo for many Ugandans — and what we can do as communities to change that.</p>
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:28px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-display);font-weight:600;font-size:1.1rem;">S</div>
+            <div>
+              <div style="color:white;font-size:0.9rem;font-weight:500;">Dr. Sarah Nakato</div>
+              <div style="color:rgba(255,255,255,0.6);font-size:0.8rem;">Jan 2025 &middot; 8 min read</div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-white">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <div style="width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.15);border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-brain" style="font-size:3rem;color:rgba(255,255,255,0.7);"></i>
           </div>
         </div>
-        <a href="#" class="btn btn-white">Read Article <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="featured-visual">
-        <i class="fas fa-brain"></i>
       </div>
     </div>
 
-    <!-- GRID -->
+    <!-- BLOG GRID -->
     <div class="grid-3" id="blogGrid">
 
       <div class="blog-card fade-in fade-in-delay-1" data-category="anxiety">
-        <div class="blog-img"><div class="blog-img-icon"><i class="fas fa-seedling"></i></div></div>
+        <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80');"><div class="blog-img-icon"><i class="fas fa-seedling"></i></div></div>
         <div class="blog-body">
           <span class="blog-tag">Anxiety</span>
           <h3>5 Grounding Techniques for Managing Anxiety</h3>
-          <p>Learn simple, evidence-based tools you can use anytime to calm your nervous system and return to the present moment.</p>
-          <div class="blog-meta">
-            <span><i class="fas fa-calendar-days"></i> Dec 2024</span>
-            <span><i class="fas fa-clock"></i> 5 min read</span>
-          </div>
+          <p>Simple, evidence-based tools to calm your nervous system and return to the present moment.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar-days"></i> Dec 2024</span><span><i class="fas fa-clock"></i> 5 min</span></div>
         </div>
       </div>
 
       <div class="blog-card fade-in fade-in-delay-2" data-category="relationships">
-        <div class="blog-img"><div class="blog-img-icon"><i class="fas fa-comments"></i></div></div>
+        <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80');"><div class="blog-img-icon"><i class="fas fa-comments"></i></div></div>
         <div class="blog-body">
           <span class="blog-tag">Relationships</span>
           <h3>How to Communicate Needs Without Conflict</h3>
-          <p>Practical communication strategies that strengthen relationships and reduce friction in daily interactions.</p>
-          <div class="blog-meta">
-            <span><i class="fas fa-calendar-days"></i> Nov 2024</span>
-            <span><i class="fas fa-clock"></i> 6 min read</span>
-          </div>
+          <p>Practical strategies that strengthen relationships and reduce daily friction.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar-days"></i> Nov 2024</span><span><i class="fas fa-clock"></i> 6 min</span></div>
         </div>
       </div>
 
       <div class="blog-card fade-in fade-in-delay-3" data-category="self-care">
-        <div class="blog-img"><div class="blog-img-icon"><i class="fas fa-spa"></i></div></div>
+        <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80');"><div class="blog-img-icon"><i class="fas fa-spa"></i></div></div>
         <div class="blog-body">
           <span class="blog-tag">Self-Care</span>
           <h3>Building a Morning Routine for Mental Clarity</h3>
           <p>Small morning habits that set a positive, intentional tone for your entire day.</p>
-          <div class="blog-meta">
-            <span><i class="fas fa-calendar-days"></i> Oct 2024</span>
-            <span><i class="fas fa-clock"></i> 4 min read</span>
-          </div>
+          <div class="blog-meta"><span><i class="fas fa-calendar-days"></i> Oct 2024</span><span><i class="fas fa-clock"></i> 4 min</span></div>
         </div>
       </div>
 
       <div class="blog-card fade-in fade-in-delay-1" data-category="trauma">
-        <div class="blog-img"><div class="blog-img-icon"><i class="fas fa-dove"></i></div></div>
+        <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=600&q=80');"><div class="blog-img-icon"><i class="fas fa-dove"></i></div></div>
         <div class="blog-body">
           <span class="blog-tag">Trauma</span>
           <h3>What is EMDR and How Does It Help Trauma?</h3>
-          <p>A clear, accessible explanation of Eye Movement Desensitisation and Reprocessing therapy and what to expect.</p>
-          <div class="blog-meta">
-            <span><i class="fas fa-calendar-days"></i> Sep 2024</span>
-            <span><i class="fas fa-clock"></i> 7 min read</span>
-          </div>
+          <p>A clear explanation of Eye Movement Desensitisation therapy and what to expect.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar-days"></i> Sep 2024</span><span><i class="fas fa-clock"></i> 7 min</span></div>
         </div>
       </div>
 
       <div class="blog-card fade-in fade-in-delay-2" data-category="parenting">
-        <div class="blog-img"><div class="blog-img-icon"><i class="fas fa-people-roof"></i></div></div>
+        <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1476703993599-0035a44b29cf?auto=format&fit=crop&w=600&q=80');"><div class="blog-img-icon"><i class="fas fa-people-roof"></i></div></div>
         <div class="blog-body">
           <span class="blog-tag">Parenting</span>
           <h3>Raising Emotionally Intelligent Children</h3>
-          <p>How to teach your children to name, understand, and healthily express their emotions from an early age.</p>
-          <div class="blog-meta">
-            <span><i class="fas fa-calendar-days"></i> Aug 2024</span>
-            <span><i class="fas fa-clock"></i> 5 min read</span>
-          </div>
+          <p>How to teach your children to name, understand, and express their emotions healthily.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar-days"></i> Aug 2024</span><span><i class="fas fa-clock"></i> 5 min</span></div>
         </div>
       </div>
 
       <div class="blog-card fade-in fade-in-delay-3" data-category="self-care">
-        <div class="blog-img"><div class="blog-img-icon"><i class="fas fa-moon"></i></div></div>
+        <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1455642305366-d6cb4f4bf74e?auto=format&fit=crop&w=600&q=80');"><div class="blog-img-icon"><i class="fas fa-moon"></i></div></div>
         <div class="blog-body">
           <span class="blog-tag">Self-Care</span>
           <h3>Why Sleep is the Foundation of Mental Health</h3>
-          <p>The powerful connection between quality sleep and emotional regulation, memory, and mood.</p>
-          <div class="blog-meta">
-            <span><i class="fas fa-calendar-days"></i> Jul 2024</span>
-            <span><i class="fas fa-clock"></i> 4 min read</span>
-          </div>
+          <p>The powerful connection between sleep quality and emotional regulation, memory, and mood.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar-days"></i> Jul 2024</span><span><i class="fas fa-clock"></i> 4 min</span></div>
         </div>
       </div>
 
       <div class="blog-card fade-in fade-in-delay-1" data-category="anxiety">
-        <div class="blog-img"><div class="blog-img-icon"><i class="fas fa-fire-flame-curved"></i></div></div>
+        <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1484627147104-f5197bcd6651?auto=format&fit=crop&w=600&q=80');"><div class="blog-img-icon"><i class="fas fa-fire-flame-curved"></i></div></div>
         <div class="blog-body">
           <span class="blog-tag">Anxiety</span>
           <h3>Burnout vs. Exhaustion: Knowing the Difference</h3>
-          <p>Signs you're experiencing workplace burnout and concrete steps to begin recovery.</p>
-          <div class="blog-meta">
-            <span><i class="fas fa-calendar-days"></i> Jun 2024</span>
-            <span><i class="fas fa-clock"></i> 6 min read</span>
-          </div>
+          <p>Signs of workplace burnout and concrete steps to begin your recovery.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar-days"></i> Jun 2024</span><span><i class="fas fa-clock"></i> 6 min</span></div>
         </div>
       </div>
 
       <div class="blog-card fade-in fade-in-delay-2" data-category="relationships">
-        <div class="blog-img"><div class="blog-img-icon"><i class="fas fa-heart-crack"></i></div></div>
+        <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80');"><div class="blog-img-icon"><i class="fas fa-heart-crack"></i></div></div>
         <div class="blog-body">
           <span class="blog-tag">Relationships</span>
           <h3>Healing After a Breakup: A Therapist's Guide</h3>
-          <p>Understanding the grief of relationship loss and how to move through it with compassion for yourself.</p>
-          <div class="blog-meta">
-            <span><i class="fas fa-calendar-days"></i> May 2024</span>
-            <span><i class="fas fa-clock"></i> 8 min read</span>
-          </div>
+          <p>The grief of relationship loss and how to move through it with compassion for yourself.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar-days"></i> May 2024</span><span><i class="fas fa-clock"></i> 8 min</span></div>
         </div>
       </div>
 
       <div class="blog-card fade-in fade-in-delay-3" data-category="trauma">
-        <div class="blog-img"><div class="blog-img-icon"><i class="fas fa-water"></i></div></div>
+        <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=600&q=80');"><div class="blog-img-icon"><i class="fas fa-water"></i></div></div>
         <div class="blog-body">
           <span class="blog-tag">Trauma</span>
           <h3>Understanding Childhood Trauma in Adults</h3>
-          <p>How unprocessed childhood experiences shape our adult behaviours, relationships, and emotional responses.</p>
-          <div class="blog-meta">
-            <span><i class="fas fa-calendar-days"></i> Apr 2024</span>
-            <span><i class="fas fa-clock"></i> 9 min read</span>
-          </div>
+          <p>How unprocessed childhood experiences shape adult behaviours and relationships.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar-days"></i> Apr 2024</span><span><i class="fas fa-clock"></i> 9 min</span></div>
         </div>
       </div>
 
@@ -223,16 +234,12 @@
         </div>
       </div>
       <div class="footer-col"><h5>Services</h5><ul class="footer-links">
-        <li><a href="services.html">Individual Therapy</a></li>
-        <li><a href="services.html">Couples Therapy</a></li>
-        <li><a href="services.html">Family Therapy</a></li>
-        <li><a href="services.html">Online Sessions</a></li>
+        <li><a href="services.html">Individual Therapy</a></li><li><a href="services.html">Couples Therapy</a></li>
+        <li><a href="services.html">Family Therapy</a></li><li><a href="services.html">Online Sessions</a></li>
       </ul></div>
       <div class="footer-col"><h5>Company</h5><ul class="footer-links">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li><li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
       </ul></div>
       <div class="footer-col"><h5>Contact</h5><ul class="footer-links">
         <li><a href="#"><i class="fas fa-location-dot"></i> Kampala, Uganda</a></li>
@@ -247,20 +254,5 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
-<script>
-function filterBlog(category) {
-  const cards = document.querySelectorAll('#blogGrid .blog-card');
-  const btns  = document.querySelectorAll('.blog-filter-btn');
-  btns.forEach(b => {
-    b.style.background = 'transparent';
-    b.style.color = 'var(--green-deep)';
-  });
-  event.target.style.background = 'var(--green-deep)';
-  event.target.style.color = 'white';
-  cards.forEach(card => {
-    card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
-  });
-}
-</script>
 </body>
 </html>
