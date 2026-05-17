@@ -6,7 +6,8 @@
   <title>About Us — Thrive Therapy UG</title>
   <meta name="description" content="Meet the compassionate team of licensed therapists at Thrive Therapy UG." />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231B4332'><path d='M17 8C8 10 5.9 16.17 3.82 22h3.28l1-2.5C9.96 21.18 11.8 22 14 22c5.52 0 10-4.48 10-10 0-4.42-2.88-8.13-6.87-9.58L17 8z'/></svg>" />
 </head>
 <body>
 
@@ -14,7 +15,7 @@
 <nav class="navbar scrolled" id="navbar">
   <div class="container">
     <a href="index.html" class="logo">
-      <div class="logo-icon">🌿</div>
+      <div class="logo-icon"><i class="fas fa-leaf"></i></div>
       Thrive Therapy
     </a>
     <ul class="nav-links">
@@ -30,7 +31,7 @@
   </div>
 </nav>
 <div class="mobile-nav" id="mobileNav">
-  <button class="mobile-close" id="mobileClose">✕</button>
+  <button class="mobile-close" id="mobileClose">&#10005;</button>
   <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
   <a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
   <a href="book.html" class="btn btn-white">Book a Session</a>
@@ -70,9 +71,23 @@
           </div>
         </div>
       </div>
-      <div class="fade-in fade-in-delay-2" style="background:linear-gradient(135deg,var(--green-deep),var(--green-sage));border-radius:var(--radius-lg);height:440px;display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative;overflow:hidden;">
-        <div style="position:absolute;inset:0;background:url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%2220%22 stroke=%22rgba(255,255,255,0.07)%22 stroke-width=%221%22/%3E%3C/g%3E%3C/svg%3E');"></div>
-        <span style="position:relative;">🌿</span>
+
+      <!-- VISUAL PANEL -->
+      <div class="about-visual fade-in fade-in-delay-2">
+        <div class="about-visual-inner">
+          <div class="av-brand">
+            <i class="fas fa-leaf"></i>
+            <span>Thrive Therapy UG</span>
+          </div>
+          <div class="av-grid">
+            <div class="av-cell"><i class="fas fa-brain"></i><small>Individual</small></div>
+            <div class="av-cell"><i class="fas fa-heart"></i><small>Couples</small></div>
+            <div class="av-cell"><i class="fas fa-people-roof"></i><small>Family</small></div>
+            <div class="av-cell"><i class="fas fa-video"></i><small>Online</small></div>
+            <div class="av-cell"><i class="fas fa-users"></i><small>Group</small></div>
+            <div class="av-cell"><i class="fas fa-spa"></i><small>Wellness</small></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -87,22 +102,22 @@
     </div>
     <div class="grid-4">
       <div class="card fade-in fade-in-delay-1" style="text-align:center;">
-        <div class="card-icon" style="margin:0 auto 20px;">❤️</div>
+        <div class="card-icon" style="margin:0 auto 20px;"><i class="fas fa-heart-pulse"></i></div>
         <h4>Compassion</h4>
         <p style="font-size:0.88rem;">Every client is met with unconditional positive regard and deep empathy.</p>
       </div>
       <div class="card fade-in fade-in-delay-2" style="text-align:center;">
-        <div class="card-icon" style="margin:0 auto 20px;">🔬</div>
+        <div class="card-icon" style="margin:0 auto 20px;"><i class="fas fa-microscope"></i></div>
         <h4>Evidence-Based</h4>
         <p style="font-size:0.88rem;">Our methods are grounded in proven, internationally recognised therapeutic frameworks.</p>
       </div>
       <div class="card fade-in fade-in-delay-3" style="text-align:center;">
-        <div class="card-icon" style="margin:0 auto 20px;">🌍</div>
+        <div class="card-icon" style="margin:0 auto 20px;"><i class="fas fa-globe-africa"></i></div>
         <h4>Cultural Sensitivity</h4>
         <p style="font-size:0.88rem;">We honour the unique cultural backgrounds and lived experiences of every client.</p>
       </div>
       <div class="card fade-in fade-in-delay-4" style="text-align:center;">
-        <div class="card-icon" style="margin:0 auto 20px;">🔒</div>
+        <div class="card-icon" style="margin:0 auto 20px;"><i class="fas fa-lock"></i></div>
         <h4>Confidentiality</h4>
         <p style="font-size:0.88rem;">Your privacy is sacred. Everything shared in sessions is completely confidential.</p>
       </div>
@@ -173,33 +188,39 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo" style="color:white;"><div class="logo-icon">🌿</div>Thrive Therapy UG</div>
+        <div class="logo" style="color:white;"><div class="logo-icon"><i class="fas fa-leaf"></i></div>Thrive Therapy UG</div>
         <p>Compassionate, professional therapy services to help you heal, grow, and thrive. Serving Uganda since 2016.</p>
         <div class="social-links" style="margin-top:24px;">
-          <a href="#" class="social-link">f</a><a href="#" class="social-link">in</a>
-          <a href="#" class="social-link">tw</a><a href="#" class="social-link">ig</a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
       <div class="footer-col"><h5>Services</h5><ul class="footer-links">
-        <li><a href="services.html">Individual Therapy</a></li><li><a href="services.html">Couples Therapy</a></li>
-        <li><a href="services.html">Family Therapy</a></li><li><a href="services.html">Group Therapy</a></li>
+        <li><a href="services.html">Individual Therapy</a></li>
+        <li><a href="services.html">Couples Therapy</a></li>
+        <li><a href="services.html">Family Therapy</a></li>
+        <li><a href="services.html">Group Therapy</a></li>
         <li><a href="services.html">Online Sessions</a></li>
       </ul></div>
       <div class="footer-col"><h5>Company</h5><ul class="footer-links">
-        <li><a href="about.html">About Us</a></li><li><a href="about.html">Our Team</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li><li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html">Our Team</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul></div>
       <div class="footer-col"><h5>Contact</h5><ul class="footer-links">
-        <li><a href="#">📍 Kampala, Uganda</a></li>
-        <li><a href="tel:+256700000000">📞 +256 700 000 000</a></li>
-        <li><a href="mailto:hello@thrivetherapyug.com">✉️ hello@thrivetherapyug.com</a></li>
-        <li><a href="#">Mon – Sat: 8am – 6pm</a></li>
+        <li><a href="#"><i class="fas fa-location-dot"></i> Kampala, Uganda</a></li>
+        <li><a href="tel:+256700000000"><i class="fas fa-phone"></i> +256 700 000 000</a></li>
+        <li><a href="mailto:hello@thrivetherapyug.com"><i class="fas fa-envelope"></i> hello@thrivetherapyug.com</a></li>
+        <li><a href="#"><i class="fas fa-clock"></i> Mon – Sat: 8am – 6pm</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Thrive Therapy UG. All rights reserved.</span>
-      <span>Built with ❤️ in Uganda</span>
+      <span>&copy; 2025 Thrive Therapy UG. All rights reserved.</span>
+      <span>Built with <i class="fas fa-heart" style="color:var(--green-sage);"></i> in Uganda</span>
     </div>
   </div>
 </footer>

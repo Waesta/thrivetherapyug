@@ -764,3 +764,135 @@ footer {
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 }
+
+/* ─── FONT AWESOME ICON SIZING ─── */
+.logo-icon i             { font-size: 1rem; color: white; }
+.card-icon i             { font-size: 1.4rem; color: var(--green-deep); }
+.card:hover .card-icon i { color: white; }
+.why-icon i              { font-size: 1.3rem; color: var(--green-sage); }
+.contact-icon i          { font-size: 1.1rem; color: var(--green-deep); }
+.social-link i           { font-size: 0.78rem; }
+
+/* ─── SERVICE CARD IMAGE ICON ─── */
+.service-img-icon {
+  width: 80px; height: 80px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+.service-img-icon i { font-size: 2rem; color: white; }
+
+/* ─── BLOG CARD IMAGE ICON ─── */
+.blog-img-icon {
+  width: 70px; height: 70px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+.blog-img-icon i { font-size: 1.7rem; color: var(--green-deep); }
+
+/* ─── ABOUT VISUAL PANEL ─── */
+.about-visual {
+  background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+  border-radius: var(--radius-lg);
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.about-visual::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 280px; height: 280px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+.about-visual::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -60px;
+  width: 220px; height: 220px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+.about-visual-inner { position: relative; z-index: 1; text-align: center; padding: 0 32px; }
+.av-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.av-brand i  { font-size: 2rem; color: var(--green-mint); }
+.av-brand span {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: white;
+  font-weight: 600;
+}
+.av-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.av-cell {
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.av-cell:hover { background: rgba(255,255,255,0.18); }
+.av-cell i     { font-size: 1.4rem; color: var(--green-mint); }
+.av-cell small {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* ─── FEATURED BLOG VISUAL ─── */
+.featured-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: rgba(255,255,255,0.2);
+  height: 100%;
+}
+
+/* ─── SOCIAL BUTTONS (contact page) ─── */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid var(--green-deep);
+  color: var(--green-deep);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition);
+  background: transparent;
+  text-decoration: none;
+}
+.social-btn:hover {
+  background: var(--green-deep);
+  color: white;
+  transform: translateY(-2px);
+}
