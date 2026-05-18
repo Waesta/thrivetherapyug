@@ -143,3 +143,41 @@ window.filterBlog = function(category, btn) {
   document.querySelectorAll('.blog-filter-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
 };
+
+// ─── Back to top button ───
+const backToTopBtn = document.getElementById('backToTop');
+if (backToTopBtn) {
+  window.addEventListener('scroll', () => {
+    backToTopBtn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ─── Cookie consent ───
+(function() {
+  const COOKIE_KEY = 'thrive_cookie_consent';
+  if (localStorage.getItem(COOKIE_KEY)) return;
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+  setTimeout(() => banner.classList.add('show'), 1200);
+  document.getElementById('cookieAccept').addEventListener('click', () => {
+    localStorage.setItem(COOKIE_KEY, 'accepted');
+    banner.classList.remove('show');
+  });
+  document.getElementById('cookieDecline').addEventListener('click', () => {
+    localStorage.setItem(COOKIE_KEY, 'declined');
+    banner.classList.remove('show');
+  });
+})();
+
+// ─── Blog reading time ───
+document.querySelectorAll('.blog-card').forEach(card => {
+  const body = card.querySelector('.blog-card-body p, .blog-excerpt');
+  if (!body) return;
+  const words = body.textContent.trim().split(/\s+/).length;
+  const mins  = Math.max(1, Math.round(words / 200));
+  const rt    = card.querySelector('.reading-time');
+  if (rt) rt.innerHTML = `<i class="fas fa-clock"></i> ${mins} min read`;
+});

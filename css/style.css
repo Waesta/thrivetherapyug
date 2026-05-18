@@ -1590,4 +1590,225 @@ footer {
   .wa-service-row { flex-direction: column; }
   .wa-service-select, .btn-whatsapp { width: 100%; justify-content: center; min-width: 0; }
 }
+
+/* ════════════════════════════════════════════
+   SKIP TO CONTENT (ACCESSIBILITY)
+   ════════════════════════════════════════════ */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--green-deep);
+  color: white;
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0 0 8px 0;
+  transition: top 0.2s ease;
+  text-decoration: none;
 }
+.skip-link:focus { top: 0; }
+
+/* ════════════════════════════════════════════
+   IMPROVED FOCUS STYLES
+   ════════════════════════════════════════════ */
+:focus-visible {
+  outline: 3px solid var(--green-sage);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--green-sage);
+  outline-offset: 3px;
+}
+
+/* ════════════════════════════════════════════
+   BACK TO TOP BUTTON
+   ════════════════════════════════════════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--green-deep);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 16px rgba(27,67,50,0.35);
+  z-index: 799;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+  pointer-events: none;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover { background: var(--green-mid); }
+@media (max-width: 480px) {
+  .back-to-top { bottom: 86px; right: 18px; width: 40px; height: 40px; }
+}
+
+/* ════════════════════════════════════════════
+   COOKIE CONSENT BANNER
+   ════════════════════════════════════════════ */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--green-deep);
+  color: rgba(255,255,255,0.9);
+  z-index: 2000;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  line-height: 1.6;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.cookie-banner.show { transform: translateY(0); }
+.cookie-banner p { flex: 1; min-width: 220px; margin: 0; }
+.cookie-banner a { color: var(--green-mint); text-decoration: underline; }
+.cookie-banner-actions { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+.btn-cookie-accept {
+  background: var(--green-sage);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--trans);
+  white-space: nowrap;
+}
+.btn-cookie-accept:hover { background: var(--green-mint); }
+.btn-cookie-decline {
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  cursor: pointer;
+  transition: var(--trans);
+  white-space: nowrap;
+}
+.btn-cookie-decline:hover { color: white; border-color: white; }
+@media (max-width: 560px) {
+  .cookie-banner { padding: 16px 18px; }
+  .cookie-banner-actions { width: 100%; }
+  .btn-cookie-accept, .btn-cookie-decline { flex: 1; text-align: center; }
+}
+
+/* ════════════════════════════════════════════
+   CRISIS RESOURCES BAR
+   ════════════════════════════════════════════ */
+.crisis-bar {
+  background: #FEF3C7;
+  border-left: 4px solid #F59E0B;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #92400E;
+  line-height: 1.5;
+}
+.crisis-bar i { color: #F59E0B; flex-shrink: 0; font-size: 1rem; }
+.crisis-bar strong { color: #78350F; }
+.crisis-bar a { color: #B45309; font-weight: 600; text-decoration: underline; }
+.crisis-bar a:hover { color: #92400E; }
+
+/* ════════════════════════════════════════════
+   FAQ ACCORDION
+   ════════════════════════════════════════════ */
+.faq-item {
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(27,67,50,0.1);
+  overflow: hidden;
+  transition: box-shadow 0.25s ease;
+}
+.faq-item:hover { box-shadow: var(--shadow-md); }
+.faq-item summary {
+  padding: 22px 24px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: var(--green-sage);
+  flex-shrink: 0;
+  transition: transform 0.28s ease;
+}
+.faq-item[open] summary { background: var(--green-pale); }
+.faq-item[open] summary::after { transform: rotate(180deg); }
+.faq-answer {
+  padding: 0 24px 22px;
+  color: var(--charcoal);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer a { color: var(--green-mid); text-decoration: underline; }
+.faq-answer a:hover { color: var(--green-deep); }
+.faq-category-title {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-sage);
+  margin: 40px 0 16px;
+}
+.faq-category-title:first-of-type { margin-top: 0; }
+
+/* ════════════════════════════════════════════
+   BLOG READING TIME
+   ════════════════════════════════════════════ */
+.reading-time {
+  font-size: 0.78rem;
+  color: var(--grey);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.reading-time i { color: var(--green-sage); }

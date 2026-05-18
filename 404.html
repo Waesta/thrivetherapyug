@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Thrive Therapy &amp; Wellness</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to Thrive Therapy &amp; Wellness — Ntinda, Kampala." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235CB340'><path d='M17 8C8 10 5.9 16.17 3.82 22h3.28l1-2.5C9.96 21.18 11.8 22 14 22c5.52 0 10-4.48 10-10 0-4.42-2.88-8.13-6.87-9.58L17 8z'/></svg>" />
+  <style>
+    /* ── 404 standalone full-page styles ── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: #1A1A1A;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Animated blobs */
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      animation: blob-float 10s ease-in-out infinite;
+    }
+    .blob-1 {
+      width: 520px;
+      height: 520px;
+      top: -180px;
+      left: -160px;
+      background: radial-gradient(circle, rgba(92,179,64,0.18) 0%, transparent 68%);
+      animation-duration: 10s;
+    }
+    .blob-2 {
+      width: 380px;
+      height: 380px;
+      bottom: -100px;
+      right: -80px;
+      background: radial-gradient(circle, rgba(42,107,28,0.22) 0%, transparent 70%);
+      animation-duration: 14s;
+      animation-direction: reverse;
+    }
+    .blob-3 {
+      width: 220px;
+      height: 220px;
+      top: 40%;
+      right: 12%;
+      background: radial-gradient(circle, rgba(92,179,64,0.09) 0%, transparent 70%);
+      animation-duration: 18s;
+      animation-delay: -4s;
+    }
+    @keyframes blob-float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      33%       { transform: translateY(-22px) scale(1.03); }
+      66%       { transform: translateY(14px) scale(0.97); }
+    }
+
+    /* Subtle grid texture overlay */
+    .grid-texture {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(92,179,64,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(92,179,64,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    /* Main centered content */
+    .not-found-wrap {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 28px;
+    }
+
+    /* Logo */
+    .nf-logo {
+      height: 48px;
+      width: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+      margin-bottom: 40px;
+      opacity: 0.92;
+    }
+
+    /* 404 number */
+    .nf-code {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(7rem, 18vw, 11rem);
+      font-weight: 700;
+      color: #5CB340;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 80px rgba(92,179,64,0.35);
+      animation: nf-pulse 3s ease-in-out infinite;
+    }
+    @keyframes nf-pulse {
+      0%, 100% { text-shadow: 0 0 80px rgba(92,179,64,0.35); }
+      50%       { text-shadow: 0 0 140px rgba(92,179,64,0.55), 0 0 40px rgba(92,179,64,0.22); }
+    }
+
+    /* Divider */
+    .nf-divider {
+      width: 56px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #5CB340, transparent);
+      border-radius: 2px;
+      margin: 0 auto 28px;
+    }
+
+    /* Heading */
+    .nf-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    /* Subtext */
+    .nf-sub {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 460px;
+      line-height: 1.75;
+      margin: 0 auto 40px;
+    }
+
+    /* Buttons */
+    .nf-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .nf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.28s cubic-bezier(0.4,0,0.2,1);
+      white-space: nowrap;
+    }
+    .nf-btn-white {
+      background: #ffffff;
+      color: #1A1A1A;
+      border-color: #ffffff;
+    }
+    .nf-btn-white:hover {
+      background: #E6F5DC;
+      border-color: #E6F5DC;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(255,255,255,0.18);
+    }
+    .nf-btn-sage {
+      background: transparent;
+      color: #5CB340;
+      border-color: #5CB340;
+    }
+    .nf-btn-sage:hover {
+      background: #5CB340;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(92,179,64,0.3);
+    }
+
+    /* Direct contact line */
+    .nf-contact {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 4px;
+    }
+    .nf-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #5CB340;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      transition: all 0.28s ease;
+    }
+    .nf-phone:hover {
+      color: #A8D980;
+      letter-spacing: 0.02em;
+    }
+    .nf-phone i { font-size: 0.9rem; }
+
+    /* Subtle footer note */
+    .nf-footer-note {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.22);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      .nf-actions { flex-direction: column; align-items: stretch; }
+      .nf-btn { justify-content: center; }
+      .nf-code { font-size: 7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Background decoration -->
+<div class="blob blob-1" aria-hidden="true"></div>
+<div class="blob blob-2" aria-hidden="true"></div>
+<div class="blob blob-3" aria-hidden="true"></div>
+<div class="grid-texture" aria-hidden="true"></div>
+
+<!-- Main 404 content -->
+<div class="not-found-wrap">
+
+  <!-- Logo -->
+  <a href="index.html" aria-label="Return to Thrive Therapy &amp; Wellness homepage">
+    <img src="images/thrive-logo.jpg" alt="Thrive Therapy &amp; Wellness" class="nf-logo" />
+  </a>
+
+  <!-- 404 code -->
+  <div class="nf-code" aria-label="Error 404">404</div>
+
+  <!-- Divider -->
+  <div class="nf-divider"></div>
+
+  <!-- Heading -->
+  <h1 class="nf-heading">Page Not Found</h1>
+
+  <!-- Subtext -->
+  <p class="nf-sub">The page you're looking for doesn't exist or may have moved. Let's get you back on track.</p>
+
+  <!-- Action buttons -->
+  <div class="nf-actions">
+    <a href="index.html" class="nf-btn nf-btn-white">
+      <i class="fas fa-house"></i>
+      Go to Homepage
+    </a>
+    <a href="book.html" class="nf-btn nf-btn-sage">
+      <i class="fas fa-calendar-check"></i>
+      Book a Session
+    </a>
+  </div>
+
+  <!-- Direct contact -->
+  <p class="nf-contact">Or reach us directly:</p>
+  <a href="tel:+256775939636" class="nf-phone">
+    <i class="fas fa-phone"></i>
+    +256 775 939 636
+  </a>
+
+  <!-- Footer attribution -->
+  <p class="nf-footer-note">&copy; 2025 Thrive Therapy &amp; Wellness &mdash; Ntinda, Kampala, Uganda</p>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

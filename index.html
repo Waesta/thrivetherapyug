@@ -5,11 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thrive Therapy &amp; Wellness — Where Mental And Physical Wellness Meet</title>
   <meta name="description" content="Thrive Therapy &amp; Wellness in Ntinda, Kampala. Compassionate mental health therapy, nutrition, hormonal health and wellness services. Where Mental And Physical Wellness Meet." />
+  <link rel="canonical" href="https://thrivetherapyug.vercel.app/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Thrive Therapy &amp; Wellness" />
+  <meta property="og:title" content="Thrive Therapy &amp; Wellness — Where Mental And Physical Wellness Meet" />
+  <meta property="og:description" content="Compassionate mental health therapy, nutrition, hormonal health and wellness services in Ntinda, Kampala, Uganda." />
+  <meta property="og:url" content="https://thrivetherapyug.vercel.app/" />
+  <meta property="og:image" content="https://thrivetherapyug.vercel.app/images/og-home.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Thrive Therapy &amp; Wellness" />
+  <meta name="twitter:description" content="Compassionate mental health therapy, nutrition, hormonal health and wellness in Kampala, Uganda." />
+  <meta name="twitter:image" content="https://thrivetherapyug.vercel.app/images/og-home.jpg" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="icon" href="images/thrive-logo.jpg" type="image/jpeg" />
+  <!-- Schema.org: MedicalOrganization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Thrive Therapy & Wellness",
+    "url": "https://thrivetherapyug.vercel.app",
+    "logo": "https://thrivetherapyug.vercel.app/images/thrive-logo.jpg",
+    "image": "https://thrivetherapyug.vercel.app/images/thrive-logo.jpg",
+    "description": "Compassionate mental health therapy, nutrition, hormonal health and wellness services in Ntinda, Kampala, Uganda.",
+    "telephone": ["+256775939636", "+256752512999"],
+    "email": "info@thriveug.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Emesa Complex, Ntinda",
+      "addressLocality": "Kampala",
+      "addressCountry": "UG"
+    },
+    "openingHours": "Mo-Sa 08:00-18:00",
+    "medicalSpecialty": ["MentalHealth", "Nutrition"],
+    "founder": {
+      "@type": "Person",
+      "name": "Patience Ahebwa",
+      "jobTitle": "Therapist & Wellness Practitioner"
+    },
+    "sameAs": [
+      "https://www.facebook.com/thrivetherapyug",
+      "https://www.instagram.com/thrivetherapyug"
+    ]
+  }
+  </script>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- ══════════════ SITE HEADER ══════════════ -->
 <header class="site-header" id="siteHeader">
@@ -72,6 +117,7 @@
     <a href="services.html">Services</a>
     <a href="testimonials.html">Testimonials</a>
     <a href="blog.html">Blog</a>
+    <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
   </nav>
   <a href="book.html" class="mobile-nav-cta">Book a Session <i class="fas fa-calendar-check"></i></a>
@@ -83,6 +129,7 @@
 </div>
 
 <!-- ══════════════ HERO ══════════════ -->
+<main id="main-content">
 <section class="hero">
   <div class="hero-panel">
     <div class="hero-blob"></div>
@@ -298,6 +345,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ══════════════ FOOTER ══════════════ -->
 <footer>
   <div class="container">
@@ -324,7 +373,9 @@
         <li><a href="about.html">Patience Ahebwa</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
       </ul></div>
       <div class="footer-col"><h5>Contact</h5><ul class="footer-links">
         <li><a href="#"><i class="fas fa-location-dot"></i> Emesa Complex, Ntinda, Kampala</a></li>
@@ -345,6 +396,17 @@
   <span class="wa-float-label">Book via WhatsApp</span>
   <i class="fab fa-whatsapp"></i>
 </a>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<!-- Cookie Consent Banner -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience and analyse site traffic. By accepting, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-banner-actions">
+    <button class="btn-cookie-accept" id="cookieAccept">Accept</button>
+    <button class="btn-cookie-decline" id="cookieDecline">Decline</button>
+  </div>
+</div>
+
 <script src="js/main.js"></script>
 </body>
 </html>
