@@ -244,14 +244,14 @@ p  { color: var(--grey); line-height: 1.8; }
   flex-shrink: 0;
 }
 
-/* Transparent navbar: invert dark logo to white */
+/* Logo always shows naturally — white-bg JPG is visible on both dark hero and cream navbar */
 .site-header:not(.scrolled) .navbar .logo img {
-  filter: brightness(0) invert(1);
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
 }
-/* Scrolled / inner pages: show original logo */
 .navbar.scrolled .logo img,
 .site-header.scrolled .navbar .logo img {
-  filter: none;
+  border-radius: 6px;
 }
 
 /* Nav links */
