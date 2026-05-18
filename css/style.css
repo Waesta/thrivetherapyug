@@ -1298,6 +1298,16 @@ footer {
 }
 .footer-brand .logo { color: white; margin-bottom: 16px; }
 .footer-brand p { font-size: 0.88rem; line-height: 1.8; max-width: 270px; }
+.footer-logo {
+  display: block;
+  height: 52px;
+  width: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background: white;
+  padding: 5px 10px;
+  box-sizing: content-box;
+}
 .footer-col h5 {
   font-family: var(--font-display);
   font-size: 1.05rem;
