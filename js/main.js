@@ -26,9 +26,9 @@ if (mobileClose) mobileClose.addEventListener('click', closeMenu);
 document.querySelectorAll('.mobile-nav a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 
-// ─── Active nav link (desktop) ───
+// ─── Active nav link (desktop + mobile) ───
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('.nav-links a, .mobile-nav-links a').forEach(link => {
   const href = (link.getAttribute('href') || '').split('?')[0];
   if (href === currentPage || (currentPage === '' && href === 'index.html')) {
     link.classList.add('active');
