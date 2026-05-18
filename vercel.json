@@ -1,12 +1,4 @@
 {
-  "version": 2,
-  "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/about", "dest": "/about.html" },
-    { "src": "/services", "dest": "/services.html" },
-    { "src": "/book", "dest": "/book.html" },
-    { "src": "/testimonials", "dest": "/testimonials.html" },
-    { "src": "/blog", "dest": "/blog.html" },
-    { "src": "/contact", "dest": "/contact.html" }
-  ]
+  "cleanUrls": true,
+  "trailingSlash": false
 }
