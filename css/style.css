@@ -710,6 +710,27 @@ p  { color: var(--grey); line-height: 1.8; }
 /* ════════════════════════════════════════════
    PAGE HERO (inner pages)
    ════════════════════════════════════════════ */
+
+/* Pillar intro grid — services page three-column intro */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+  .pillar-grid .pillar-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .pillar-grid .pillar-item:last-child {
+    border-bottom: none;
+  }
+}
+
 .page-hero {
   background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 100%);
   padding: 180px 0 88px;
