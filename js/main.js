@@ -116,6 +116,25 @@ if (contactForm) {
   });
 }
 
+// ─── WhatsApp dynamic booking link ───
+const WA_PHONE = '256775939636';
+const waServicePick = document.getElementById('waServicePick');
+const waBookLink    = document.getElementById('waBookLink');
+
+function buildWAMessage(service) {
+  const svc = service ? `a *${service}*` : 'a';
+  return encodeURIComponent(
+    `Hello Thrive Therapy & Wellness,\n\nI'd like to book ${svc} session. Please advise on available times.\n\nThank you.`
+  );
+}
+function refreshWALink() {
+  if (!waBookLink) return;
+  const service = waServicePick ? waServicePick.value : '';
+  waBookLink.href = `https://wa.me/${WA_PHONE}?text=${buildWAMessage(service)}`;
+}
+if (waServicePick) waServicePick.addEventListener('change', refreshWALink);
+refreshWALink();
+
 // ─── Blog filter ───
 window.filterBlog = function(category, btn) {
   document.querySelectorAll('#blogGrid .blog-card').forEach(card => {

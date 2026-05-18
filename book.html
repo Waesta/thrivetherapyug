@@ -92,7 +92,44 @@
       <div class="booking-form-wrap fade-in">
         <div class="section-label" style="margin-bottom:8px;">Appointment Form</div>
         <h2 style="margin-bottom:8px;font-size:1.8rem;">Schedule Your Session</h2>
-        <p style="margin-bottom:32px;">All sessions are confidential. We respond within 24 hours.</p>
+        <p style="margin-bottom:24px;">All sessions are confidential. We respond within 24 hours.</p>
+
+        <!-- WhatsApp quick-booking card -->
+        <div class="wa-booking-card">
+          <div class="wa-booking-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="wa-booking-body">
+            <h4>Book Instantly via WhatsApp</h4>
+            <p>Choose your service and tap — WhatsApp opens with your request ready. We respond within minutes during clinic hours.</p>
+            <div class="wa-service-row">
+              <select class="wa-service-select" id="waServicePick">
+                <option value="">Choose a service (optional)</option>
+                <option>Mental Health Consultation</option>
+                <option>Individual Therapy</option>
+                <option>Couples Therapy</option>
+                <option>Family Therapy</option>
+                <option>Group Therapy</option>
+                <option>Stress &amp; Grief Counseling</option>
+                <option>Trauma Counseling</option>
+                <option>Addiction Counseling</option>
+                <option>Career &amp; Academic Counseling</option>
+                <option>HIV/AIDS Counselling</option>
+                <option>Sexual &amp; Reproductive Health</option>
+                <option>Hormonal Health (PCOS / Perimenopause)</option>
+                <option>Physical Strength &amp; Vitality</option>
+                <option>Nutrition &amp; Lifestyle Coaching</option>
+                <option>Workplace Wellness</option>
+                <option>Online Therapy Session</option>
+              </select>
+              <a id="waBookLink"
+                 href="https://wa.me/256775939636?text=Hello%20Thrive%20Therapy%20%26%20Wellness%2C%0A%0AI%27d%20like%20to%20book%20a%20session.%20Please%20advise%20on%20available%20times.%0A%0AThank%20you."
+                 class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Open WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="wa-divider">or fill in the form below</div>
 
         <form id="bookingForm">
           <div class="form-grid">
@@ -271,6 +308,11 @@
     </div>
   </div>
 </footer>
+<a href="https://wa.me/256775939636?text=Hello%20Thrive%20Therapy%20%26%20Wellness%2C%0A%0AI%27d%20like%20to%20book%20a%20session.%20Please%20advise%20on%20available%20times.%0A%0AThank%20you."
+   class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Book on WhatsApp">
+  <span class="wa-float-label">Book via WhatsApp</span>
+  <i class="fab fa-whatsapp"></i>
+</a>
 <script src="js/main.js"></script>
 </body>
 </html>
