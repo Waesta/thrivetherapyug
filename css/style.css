@@ -2505,3 +2505,131 @@ textarea:focus-visible {
 .shop-teaser-card-body { padding: 16px; }
 .shop-teaser-card-body h4 { font-size: 0.95rem; margin-bottom: 4px; }
 .shop-teaser-card-body .price { font-size: 1rem; font-weight: 700; color: var(--green-deep); }
+
+/* ════════════════════════════════════════════
+   TEAM FOUNDER LAYOUT (REPLACES INLINE STYLE)
+   ════════════════════════════════════════════ */
+.team-founder-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ════════════════════════════════════════════
+   MOBILE RESPONSIVENESS — GLOBAL ADDITIONS
+   ════════════════════════════════════════════ */
+
+/* Founder layout: stack on tablet/mobile */
+@media (max-width: 900px) {
+  .team-founder-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .team-founder-layout > div:first-child {
+    max-width: 340px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Specialization grid in bio — 2 cols → 1 col */
+.specialization-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+  margin-bottom: 28px;
+}
+@media (max-width: 600px) {
+  .specialization-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+/* Team grid — min-width guard on very small screens */
+@media (max-width: 600px) {
+  .team-grid-large {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .team-card-placeholder { min-height: 280px; }
+}
+
+/* Shop grid */
+@media (max-width: 580px) {
+  .shop-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .shop-filter-bar { gap: 8px; }
+  .shop-filter-btn { padding: 8px 16px; font-size: 0.82rem; }
+}
+
+/* Service pages */
+@media (max-width: 600px) {
+  .service-hero { min-height: 340px; padding-bottom: 48px; }
+  .service-hero-content { padding-top: 100px; }
+  .service-body h2 { font-size: 1.35rem; }
+  .service-layout { padding: 48px 0; }
+}
+
+/* CTA banner buttons — ensure wrap on small screens */
+@media (max-width: 480px) {
+  .cta-banner .btn { width: 100%; text-align: center; }
+}
+
+/* Shop teaser grid — single column on very small screens */
+@media (max-width: 480px) {
+  .shop-teaser-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+@media (max-width: 360px) {
+  .shop-teaser-grid { grid-template-columns: 1fr; }
+}
+
+/* Team wa-link — full width on mobile */
+@media (max-width: 600px) {
+  .team-wa-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Service related grid — ensure wraps */
+@media (max-width: 540px) {
+  .service-related-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* Values grid on team page — force 2 cols max on mobile */
+@media (max-width: 540px) {
+  .section-dark [style*="repeat(auto-fill,minmax(220px,1fr))"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+@media (max-width: 360px) {
+  .section-dark [style*="repeat(auto-fill,minmax(220px,1fr))"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Founder bio specialization inline grid override via class — see team.html */
+@media (max-width: 600px) {
+  .team-founder-layout [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Ensure slide CTAs stack nicely on very small screens */
+@media (max-width: 400px) {
+  .slide-inner h2 { font-size: 1.5rem; }
+  .slide-inner p { font-size: 0.9rem; }
+}
