@@ -181,3 +181,56 @@ document.querySelectorAll('.blog-card').forEach(card => {
   const rt    = card.querySelector('.reading-time');
   if (rt) rt.innerHTML = `<i class="fas fa-clock"></i> ${mins} min read`;
 });
+
+// ─── Hero Slider ───
+(function () {
+  const slider = document.querySelector('.hero-slider');
+  if (!slider) return;
+
+  const slides = Array.from(slider.querySelectorAll('.slide'));
+  const dots   = Array.from(slider.querySelectorAll('.slider-dot'));
+  let current  = 0;
+  let timer    = null;
+  let touchStartX = 0;
+
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    if (dots[current]) dots[current].classList.remove('active');
+    current = ((idx % slides.length) + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    if (dots[current]) dots[current].classList.add('active');
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAuto() { timer = setInterval(next, 5200); }
+  function stopAuto()  { clearInterval(timer); }
+
+  slider.addEventListener('mouseenter', stopAuto);
+  slider.addEventListener('mouseleave', startAuto);
+
+  const btnNext = slider.querySelector('.slider-next');
+  const btnPrev = slider.querySelector('.slider-prev');
+  if (btnNext) btnNext.addEventListener('click', () => { stopAuto(); next(); startAuto(); });
+  if (btnPrev) btnPrev.addEventListener('click', () => { stopAuto(); prev(); startAuto(); });
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); }));
+
+  slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  slider.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 48) { stopAuto(); (dx < 0 ? next : prev)(); startAuto(); }
+  });
+
+  startAuto();
+})();
+
+// ─── Shop filter ───
+window.filterShop = function (category, btn) {
+  document.querySelectorAll('#shopGrid .product-card').forEach(card => {
+    card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+  });
+  document.querySelectorAll('.shop-filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+};
