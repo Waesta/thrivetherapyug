@@ -24,9 +24,10 @@
   </div>
 </div>
 
-<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+<header id="siteHeader">
+<nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="container navbar-inner">
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-logo">
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-logo logo">
       <img src="<?php echo esc_url( THRIVE_URI . '/images/thrive-logo.jpg' ); ?>" alt="Thrive Therapy &amp; Wellness" height="44">
     </a>
 
@@ -35,25 +36,27 @@
       <li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" <?php if ( is_page( 'about' ) ) echo 'class="active"'; ?>>About</a></li>
       <li><a href="<?php echo esc_url( home_url( '/team/' ) ); ?>" <?php if ( is_page( 'team' ) ) echo 'class="active"'; ?>>Our Team</a></li>
       <li class="has-dropdown">
-        <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" <?php if ( is_page( 'services' ) ) echo 'class="active"'; ?>>Services <i class="fas fa-chevron-down"></i></a>
+        <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" <?php if ( is_page( 'services' ) ) echo 'class="active"'; ?>>Services <i class="fas fa-chevron-down chevron"></i></a>
         <ul class="dropdown">
-          <li><a href="<?php echo esc_url( home_url( '/services/#mental-wellness' ) ); ?>"><i class="fas fa-brain"></i> Mental Health Therapy</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#mental-wellness' ) ); ?>"><i class="fas fa-heart"></i> Couples &amp; Family Therapy</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>"><i class="fas fa-apple-whole"></i> Nutrition &amp; Lifestyle</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>"><i class="fas fa-dumbbell"></i> Physical Strength</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>"><i class="fas fa-venus"></i> Hormonal Health</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>"><i class="fas fa-users"></i> Group &amp; Workshops</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>"><i class="fas fa-shield-heart"></i> Trauma &amp; Grief</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>"><i class="fas fa-briefcase"></i> Workplace Wellness</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#mental-wellness' ) ); ?>"><span class="dd-icon"><i class="fas fa-brain"></i></span>Mental Health Therapy</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#mental-wellness' ) ); ?>"><span class="dd-icon"><i class="fas fa-heart"></i></span>Couples &amp; Family</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>"><span class="dd-icon"><i class="fas fa-apple-whole"></i></span>Nutrition &amp; Lifestyle</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>"><span class="dd-icon"><i class="fas fa-dumbbell"></i></span>Physical Strength</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>"><span class="dd-icon"><i class="fas fa-venus"></i></span>Hormonal Health</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#mental-wellness' ) ); ?>"><span class="dd-icon"><i class="fas fa-users"></i></span>Group &amp; Workshops</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#mental-wellness' ) ); ?>"><span class="dd-icon"><i class="fas fa-shield-heart"></i></span>Trauma &amp; Grief</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>"><span class="dd-icon"><i class="fas fa-briefcase"></i></span>Workplace Wellness</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/book/' ) ); ?>" class="dd-book"><span class="dd-icon"><i class="fas fa-calendar-check"></i></span>Book a Session</a></li>
         </ul>
       </li>
-      <li><a href="<?php echo esc_url( home_url( '/testimonials/' ) ); ?>" <?php if ( is_page( 'testimonials' ) ) echo 'class="active"'; ?>>Testimonials</a></li>
+      <li><a href="<?php echo esc_url( home_url( '/shop/' ) ); ?>" <?php if ( is_page( 'shop' ) ) echo 'class="active"'; ?>>Shop</a></li>
+      <li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" <?php if ( is_home() || is_archive() ) echo 'class="active"'; ?>>Blog</a></li>
       <li><a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>" <?php if ( is_page( 'faq' ) ) echo 'class="active"'; ?>>FAQ</a></li>
       <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" <?php if ( is_page( 'contact' ) ) echo 'class="active"'; ?>>Contact</a></li>
     </ul>
 
     <div class="navbar-actions">
-      <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="btn btn-primary navbar-cta" target="_blank" rel="noopener">
+      <a href="<?php echo esc_url( home_url( '/book/' ) ); ?>" class="btn btn-primary navbar-cta nav-cta">
         Book a Session
       </a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -62,5 +65,28 @@
     </div>
   </div>
 </nav>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">&#10005;</button>
+  <img src="<?php echo esc_url( THRIVE_URI . '/images/thrive-logo.jpg' ); ?>" class="mobile-nav-logo" alt="Thrive Therapy &amp; Wellness">
+  <nav class="mobile-nav-links">
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+    <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About</a>
+    <a href="<?php echo esc_url( home_url( '/team/' ) ); ?>">Our Team</a>
+    <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Services</a>
+    <a href="<?php echo esc_url( home_url( '/shop/' ) ); ?>">Shop</a>
+    <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a>
+    <a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">FAQ</a>
+    <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact</a>
+  </nav>
+  <a href="<?php echo esc_url( home_url( '/book/' ) ); ?>" class="mobile-nav-cta">Book a Session <i class="fas fa-calendar-check"></i></a>
+  <div class="mobile-nav-social">
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
 
 <main id="main-content">

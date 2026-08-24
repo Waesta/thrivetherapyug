@@ -269,6 +269,38 @@
   </div>
 </section>
 
+<!-- WELLNESS SHOP TEASER -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered fade-in">
+      <div class="section-label">Thrive Wellness Shop</div>
+      <h2>Support Your Healing at Home</h2>
+      <p>Curated supplements, self-care products and books &mdash; recommended by our clinicians and delivered to you across Uganda.</p>
+    </div>
+    <div class="shop-teaser-grid">
+      <a href="<?php echo esc_url( home_url( '/shop/' ) ); ?>" class="shop-teaser-card fade-in fade-in-delay-1">
+        <img src="https://images.pexels.com/photos/3683041/pexels-photo-3683041.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Magnesium Glycinate" loading="lazy">
+        <div class="shop-teaser-card-body"><h4>Magnesium Glycinate</h4><div class="price">UGX 45,000</div></div>
+      </a>
+      <a href="<?php echo esc_url( home_url( '/shop/' ) ); ?>" class="shop-teaser-card fade-in fade-in-delay-2">
+        <img src="https://images.pexels.com/photos/3735162/pexels-photo-3735162.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Aromatherapy Self-Care Kit" loading="lazy">
+        <div class="shop-teaser-card-body"><h4>Aromatherapy Self-Care Kit</h4><div class="price">UGX 85,000</div></div>
+      </a>
+      <a href="<?php echo esc_url( home_url( '/shop/' ) ); ?>" class="shop-teaser-card fade-in fade-in-delay-3">
+        <img src="https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Wellness Journal &amp; Workbook" loading="lazy">
+        <div class="shop-teaser-card-body"><h4>Wellness Journal &amp; Workbook</h4><div class="price">UGX 35,000</div></div>
+      </a>
+      <a href="<?php echo esc_url( home_url( '/shop/' ) ); ?>" class="shop-teaser-card fade-in fade-in-delay-4">
+        <img src="https://images.pexels.com/photos/4046316/pexels-photo-4046316.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="Hormonal Balance Supplement" loading="lazy">
+        <div class="shop-teaser-card-body"><h4>Hormonal Balance Supplement</h4><div class="price">UGX 65,000</div></div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="<?php echo esc_url( home_url( '/shop/' ) ); ?>" class="btn btn-primary">Browse the Wellness Shop <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
 <!-- LIFE AT THRIVE GALLERY -->
 <section class="section section-alt">
   <div class="container">
