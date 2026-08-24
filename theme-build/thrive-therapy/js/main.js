@@ -184,45 +184,46 @@ document.querySelectorAll('.blog-card').forEach(card => {
 
 // ─── Hero Slider ───
 (function () {
-  const slider = document.querySelector('.hero-slider');
-  if (!slider) return;
+  const track = document.getElementById('slidesTrack');
+  if (!track) return;
 
-  const slides = Array.from(slider.querySelectorAll('.slide'));
-  const dots   = Array.from(slider.querySelectorAll('.slider-dot'));
-  let current  = 0;
-  let timer    = null;
+  const dots  = Array.from(document.querySelectorAll('.slide-dot'));
+  const total = dots.length;
+  let current = 0;
+  let timer   = null;
   let touchStartX = 0;
 
   function goTo(idx) {
-    slides[current].classList.remove('active');
-    if (dots[current]) dots[current].classList.remove('active');
-    current = ((idx % slides.length) + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    if (dots[current]) dots[current].classList.add('active');
+    current = ((idx % total) + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
   }
 
   function next() { goTo(current + 1); }
   function prev() { goTo(current - 1); }
 
-  function startAuto() { timer = setInterval(next, 5200); }
+  function startAuto() { timer = setInterval(next, 5500); }
   function stopAuto()  { clearInterval(timer); }
 
-  slider.addEventListener('mouseenter', stopAuto);
-  slider.addEventListener('mouseleave', startAuto);
+  const slider = track.closest('.hero-slider');
+  if (slider) {
+    slider.addEventListener('mouseenter', stopAuto);
+    slider.addEventListener('mouseleave', startAuto);
+    slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 48) { stopAuto(); (dx < 0 ? next : prev)(); startAuto(); }
+    });
+  }
 
-  const btnNext = slider.querySelector('.slider-next');
-  const btnPrev = slider.querySelector('.slider-prev');
+  const btnNext = document.getElementById('slideNext');
+  const btnPrev = document.getElementById('slidePrev');
   if (btnNext) btnNext.addEventListener('click', () => { stopAuto(); next(); startAuto(); });
   if (btnPrev) btnPrev.addEventListener('click', () => { stopAuto(); prev(); startAuto(); });
 
   dots.forEach((dot, i) => dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); }));
 
-  slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-  slider.addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 48) { stopAuto(); (dx < 0 ? next : prev)(); startAuto(); }
-  });
-
+  goTo(0);
   startAuto();
 })();
 

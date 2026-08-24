@@ -40,6 +40,7 @@
       <p>Evidence-based, compassionate support for every stage of your healing journey.</p>
     </div>
     <div class="grid-3">
+
       <div class="service-card fade-in fade-in-delay-1">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/thrive-reception.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-brain"></i></div>
@@ -51,6 +52,7 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div class="service-card fade-in fade-in-delay-2">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/therapy-session.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-user"></i></div>
@@ -61,6 +63,7 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div class="service-card fade-in fade-in-delay-3">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/clinic-consultation-room.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-heart"></i></div>
@@ -71,6 +74,7 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div class="service-card fade-in fade-in-delay-1">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/thrive-welcome.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-people-roof"></i></div>
@@ -81,16 +85,18 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div class="service-card fade-in fade-in-delay-2">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/group-therapy-workshop.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-users"></i></div>
         </div>
         <div class="service-body">
           <h3>Group Therapy</h3>
-          <p>Facilitated group sessions — grief circles, stress support groups, and women's wellness groups. Healing in community.</p>
+          <p>Facilitated group sessions — grief circles, stress support groups, and women&rsquo;s wellness groups. Healing in community.</p>
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div class="service-card fade-in fade-in-delay-3">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/patience-office-portrait.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-shield-heart"></i></div>
@@ -102,6 +108,7 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div class="service-card fade-in fade-in-delay-1">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/thrive-reception-logo.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-hand-holding-heart"></i></div>
@@ -112,6 +119,7 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div class="service-card fade-in fade-in-delay-2">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/patience-ahebwa.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-graduation-cap"></i></div>
@@ -122,6 +130,7 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div class="service-card fade-in fade-in-delay-3">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/thrive-welcome.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-video"></i></div>
@@ -133,6 +142,7 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -146,6 +156,7 @@
       <p>We are one of the few clinics in Uganda integrating physical vitality and hormonal health into therapy.</p>
     </div>
     <div class="grid-3">
+
       <div class="service-card fade-in fade-in-delay-1">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/fitness-class.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-dumbbell"></i></div>
@@ -156,7 +167,8 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      <div id="womens-mens-wellness" class="service-card fade-in fade-in-delay-2">
+
+      <div class="service-card fade-in fade-in-delay-2">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/womens-wellness-group.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-apple-whole"></i></div>
         </div>
@@ -166,6 +178,7 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div class="service-card fade-in fade-in-delay-3">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/patience-office-portrait.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-venus"></i></div>
@@ -177,16 +190,19 @@
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      <div id="childrens-development" class="service-card fade-in fade-in-delay-1">
-        <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/youth-group-session.jpg' ); ?>');">
-          <div class="service-img-icon"><i class="fas fa-child-reaching"></i></div>
+
+      <div id="womens-mens-wellness" class="service-card fade-in fade-in-delay-1">
+        <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/thrive-welcome.jpg' ); ?>');">
+          <div class="service-img-icon"><i class="fas fa-ribbon"></i></div>
         </div>
         <div class="service-body">
-          <h3>Children&rsquo;s &amp; Adolescent Development</h3>
-          <p>Parenting guidance, puberty support, parent-teen communication and emotional coaching for young people.</p>
+          <span class="badge" style="margin-bottom:12px;">Confidential</span>
+          <h3>Sexual &amp; Reproductive Health</h3>
+          <p>Confidential counselling on sexual health, reproductive choices, HIV/AIDS, and STIs — with full respect and dignity.</p>
           <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="service-link" style="margin-top:16px;" target="_blank" rel="noopener">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div id="workplace-wellness" class="service-card fade-in fade-in-delay-2">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/group-therapy-workshop.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-briefcase"></i></div>
@@ -197,6 +213,7 @@
           <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="service-link" style="margin-top:16px;">Get a Quote <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
       <div class="service-card fade-in fade-in-delay-3">
         <div class="service-img" style="background-image:url('<?php echo esc_url( THRIVE_URI . '/images/youth-group-session.jpg' ); ?>');">
           <div class="service-img-icon"><i class="fas fa-chalkboard-user"></i></div>
@@ -207,6 +224,7 @@
           <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="service-link" style="margin-top:16px;">Contact Us <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -227,7 +245,7 @@
       <div class="fade-in fade-in-delay-2" style="text-align:center;padding:32px 20px;">
         <div class="step-num">2</div>
         <h4>Assessment Session</h4>
-        <p style="font-size:0.9rem;margin-top:8px;">Our clinician conducts a thorough assessment across mental, physical, and hormonal health dimensions.</p>
+        <p style="font-size:0.9rem;margin-top:8px;">Patience conducts a thorough assessment across mental, physical, and hormonal health dimensions.</p>
       </div>
       <div class="fade-in fade-in-delay-3" style="text-align:center;padding:32px 20px;">
         <div class="step-num">3</div>
@@ -248,7 +266,7 @@
     <h2 class="fade-in">Not Sure Which Service Is Right for You?</h2>
     <p class="fade-in">Book a consultation and Patience will guide you to the most suitable approach for your unique situation.</p>
     <div class="fade-in" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="btn btn-white" target="_blank" rel="noopener">Book a Consultation</a>
+      <a href="<?php echo esc_url( thrive_wa_url() ); ?>" class="btn btn-white" target="_blank" rel="noopener">Book a Free Consultation</a>
       <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.5);">Contact Us</a>
     </div>
   </div>

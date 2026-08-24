@@ -5,7 +5,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="<?php echo esc_url( THRIVE_URI . '/images/thrive-logo.jpg' ); ?>" alt="Thrive Therapy &amp; Wellness" style="height:44px;width:auto;filter:brightness(0) invert(1);margin-bottom:16px;">
-        <p>Where Mental And Physical Wellness Meet. Serving Kampala and Uganda since 2016.</p>
+        <p>Where Mental And Physical Wellness Meet. Serving Kampala and Uganda since 2019.</p>
         <div class="social-links">
           <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -16,10 +16,11 @@
         <h5>Services</h5>
         <ul class="footer-links">
           <li><a href="<?php echo esc_url( home_url( '/services/#mental-wellness' ) ); ?>">Mental Health Therapy</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>">Healthy Living &amp; Relationships</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#womens-mens-wellness' ) ); ?>">Women&rsquo;s &amp; Men&rsquo;s Wellness</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#childrens-development' ) ); ?>">Children&rsquo;s Development</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/services/#workplace-wellness' ) ); ?>">Workplace Wellness</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#mental-wellness' ) ); ?>">Couples &amp; Family Therapy</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>">Nutrition &amp; Lifestyle</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>">Physical Strength</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>">Hormonal Health</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/services/#healthy-living' ) ); ?>">Workplace Wellness</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -37,11 +38,12 @@
       <div class="footer-col">
         <h5>Contact</h5>
         <ul class="footer-links">
-          <li><a href="#"><i class="fas fa-location-dot"></i> Emesa Complex, Ntinda, Kampala</a></li>
+          <li><span><i class="fas fa-location-dot"></i> Emesa Complex, Opp. Kampala Independent Hospital, Ntinda</span></li>
           <li><a href="tel:+256775939636"><i class="fas fa-phone"></i> +256 775 939 636</a></li>
           <li><a href="tel:+256752512999"><i class="fas fa-phone"></i> +256 752 512 999</a></li>
           <li><a href="mailto:info@thriveug.com"><i class="fas fa-envelope"></i> info@thriveug.com</a></li>
-          <li><span><i class="fas fa-clock"></i> Mon &ndash; Sat: 8am &ndash; 6pm</span></li>
+          <li><span><i class="fas fa-clock"></i> Mon&ndash;Fri: 8am&ndash;6pm</span></li>
+          <li><span><i class="fas fa-clock"></i> Sat: 9am&ndash;3pm &nbsp;|&nbsp; Sun: Closed</span></li>
         </ul>
       </div>
     </div>
